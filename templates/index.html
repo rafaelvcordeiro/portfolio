@@ -1,0 +1,266 @@
+{% extends "layout.html" %}
+{% block title %}
+Portfolio
+{% endblock %}
+
+{% block main %}
+
+
+<!-- Page Header
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="row">
+  <div class="twelve column" style="text-align: center;">
+    <h2>Projects by Rafael Cordeiro</h2>
+  </div>
+</div>
+
+
+<!-- Movie / TV shows Details Page -->
+<!--
+<div class="row">
+  <div class="twelve columns">
+    <div id="details-page" class="desligado">
+      <div class="row">
+        <div class="three columns">
+          <div>
+            <img id="dPoster" class="img" src="" style="max-width: 240px;">
+          </div>
+        </div>
+        <div class="nine columns">
+          <div class="row">
+            <div class="six columns">
+              <h6>
+                <strong>Title: </strong><span id="dTitle"></span><br>
+                <strong>Watched: </strong><span id="dWatched"></span><br>
+                <strong>Type: </strong><span id="dType"></span><br>
+                <strong>Duration: </strong><span id="dDuration"></span> minutes<br>
+                <strong>IMDB Rating: </strong><span id="dRating"></span>/10<br>
+              </h6>
+            </div>
+            <div class="six columns">
+              <h6>
+                <strong>Countries: </strong><span id="dCountry"></span><br>
+                <strong>Year: </strong><span id="dYear"></span><br>
+                <strong>Platform: </strong><span id="dPlatform"></span><br>
+                <strong>Genres: </strong><span id="dFields"></span><br>
+                <strong>Writers/Creators: </strong><span id="dWriter"></span><br>
+              </h6>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="twelve columns">
+              <h6>
+                <strong>Plot: </strong><span id="dPlot"></span><br>
+                <strong>Comment: </strong><span id="dComment"></span><br>
+                <div style="max-height:46px; overflow: hidden;">
+                  <strong>Cast: </strong><span id="dCast"></span><br>
+                </div>
+              </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div id="divTrailer" class="desligado">
+          <div class="twelve column">
+            <iframe id="dTrailer" width="400" height="270" src="" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="margin-bottom: 50px; margin-top: 20px">
+        <div style="text-align: center;">
+          <form style="display: inline-block;" action="/watched" method="post"><input type="hidden"
+              name="recordIdWatched" id="recordIdWatched" value="">
+            <button type="submit">Watched</button>
+          </form>
+          <form style="display: inline-block;" action="/edit" method="get"><input type="hidden" name="recordIdEdit"
+              id="recordIdEdit" value="">
+            <button type="submit">Edit</button>
+          </form>
+          <form style="display: inline-block;" action="/delete" method="post"><input type="hidden" name="recordIdDelete"
+              id="recordIdDelete" value="">
+            <button type="submit">Delete</button>
+          </form>
+          <button type="button" name="buttonClose" value="buttonClose" onclick="detailsExpand()">Close</button>
+          <hr>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+-->
+
+<!-- Filters for skill -->
+<div class="row" style="margin-top: 10px; margin-top:40px">
+
+  <div class="twelve columns" style="text-align: center;">
+    
+      <h6>
+        {% for field in fieldsList %}
+        <span style="display:inline-block;">
+          <label style="font-weight: 300; font-size: smaller;" for="cbField{{ field }}">
+            <input type="checkbox" id="cbField{{ field }}" name="cbField" value="{{ field }}"> {{ field }}&nbsp;&nbsp;
+          </label>
+        </span>
+        {% endfor %}
+      </h6>
+    
+  </div>
+</div>
+
+<!-- not watched items start -->
+<!-- "Software Development,Robotics and Machine Design,Electronics and Sensors,Management" -->
+<div class="row">
+  <div class="twelve columns items">
+
+
+
+    <!-- item start -->
+    <a href="/temp">
+    <div class="item" id="" dId="" dFields="Software Development" style="text-align: center;" onclick="showDetails(this)">
+      <div class="row item-poster">
+        <img src='../static/images/bookmovie/icon.jpg' style="height: 220px; width: auto;">
+      </div><br>
+      <div class="row item-title">
+        <h5>Bookmovie</h5>
+      </div><br>
+      <div class="row item-description">
+        Python/Flask webapp for movie watchlist
+      </div>
+    </div></a>
+    <!-- item end -->
+
+    <!-- item start -->
+    <a href="/temp">
+    <div class="item" id="" dId="" dFields="Robotics and Machine Design,Product and Project Management" style="text-align: center;" onclick="showDetails(this)">
+      <div class="row item-poster">
+        <img src='../static/images/cnc-af/icon.jpg' style="height: 220px; width: auto;">
+      </div><br>
+      <div class="row item-title">
+        <h5>CNC André Ferri</h5>
+      </div><br>
+      <div class="row item-description">
+        Custom CNC Machine for 3d carving
+      </div>
+    </div></a>
+    <!-- item end -->
+
+    <!-- item start -->
+    <a href="/temp">
+    <div class="item" id="" dId="" dFields="Product and Project Management" style="text-align: center;" onclick="showDetails(this)">
+      <div class="row item-poster">
+        <img src='../static/images/tupia/icon.jpg' style="height: 220px; width: auto;">
+      </div><br>
+      <div class="row item-title">
+        <h5>Tupia</h5>
+      </div><br>
+      <div class="row item-description">
+        <em>Products for working better in home office</em>
+      </div>
+    </div></a>
+    <!-- item end -->
+
+    <!-- item start -->
+    <a href="/temp">
+    <div class="item" id="" dId="" dFields="Robotics and Machine Design,Product and Project Management" style="text-align: center;" onclick="showDetails(this)">
+      <div class="row item-poster">
+        <img src='../static/images/fabrica-jangada/icon.jpg' style="height: 220px; width: auto;">
+      </div><br>
+      <div class="row item-title">
+        <h5>Fábrica Jangada</h5>
+      </div><br>
+      <div class="row item-description">
+        <em>Precision Manufacturing business</em>
+      </div>
+    </div></a>
+    <!-- item end -->
+
+    <!-- item start -->
+    <a href="/temp">
+    <div class="item" id="" dId="" dFields="Product and Project Management" style="text-align: center;" onclick="showDetails(this)">
+      <div class="row item-poster">
+        <img src='../static/images/3d-analysis/icon.jpg' style="height: 220px; width: auto;">
+      </div><br>
+      <div class="row item-title">
+        <h5>3D Analysis</h5>
+      </div><br>
+      <div class="row item-description">
+        <em>Strategic 3D analysis for industrial projects</em>
+      </div>
+    </div></a>
+    <!-- item end -->
+
+    <!-- item start -->
+    <a href="/temp">
+    <div class="item" id="" dId="" dFields="Robotics and Machine Design,Electronics and Sensors" style="text-align: center;" onclick="showDetails(this)">
+      <div class="row item-poster">
+        <img src='../static/images/cnc-machine/icon.jpg' style="height: 220px; width: auto;">
+      </div><br>
+      <div class="row item-title">
+        <h5>CNC MAchines</h5>
+      </div><br>
+      <div class="row item-description">
+        <em>Other CNC machines built over time</em>
+      </div>
+    </div></a>
+    <!-- item end -->
+
+    <!-- item start -->
+    <a href="/temp">
+    <div class="item" id="" dId="" dFields="Software Development,Robotics and Machine Design,Electronics and Sensors" style="text-align: center;" onclick="showDetails(this)">
+      <div class="row item-poster">
+        <img src='../static/images/robo-labor/icon.jpg' style="height: 220px; width: auto;">
+      </div><br>
+      <div class="row item-title">
+        <h5>Mobile Robot</h5>
+      </div><br>
+      <div class="row item-description">
+        <em>Mobile robot with wheels for surveillance</em>
+      </div>
+    </div></a>
+    <!-- item end -->
+
+    <!-- item start -->
+    <a href="/temp">
+    <div class="item" id="" dId="" dFields="Software Development,Robotics and Machine Design,Electronics and Sensors" style="text-align: center;">
+      <div class="row item-poster">
+        <img src='../static/images/das-usb/sad3.jpg' style="height: 220px; width: auto;">
+      </div><br>
+      <div class="row item-title">
+        <h5>USB D.A.S</h5>
+      </div><br>
+      <div class="row item-description">
+        <em>Low cost USB data acquisition system</em>
+      </div>
+    </div></a>
+    <!-- item end -->
+
+    <!-- item start -->
+    <a href="/temp">
+    <div class="item" id="" dId="" dFields="Software Development,Robotics and Machine Design" style="text-align: center;" onclick="showDetails(this)">
+      <div class="row item-poster">
+        <img src='../static/images/gera/icon.png' style="height: 220px; width: auto;">
+      </div><br>
+      <div class="row item-title">
+        <h5>GERA</h5>
+      </div><br>
+      <div class="row item-description">
+      <em>Educational robot control software</em>
+      </div>
+    </div></a>
+    <!-- item end -->
+
+  </div>
+</div>
+<!-- not watched items end -->
+
+<br>
+
+
+{% endblock %}
