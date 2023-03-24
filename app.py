@@ -46,6 +46,12 @@ def index():
 
 
 # Temporary page
+@app.route("/bookmovie")
+def bookmovie():
+    return render_template("bookmovie.html")
+
+
+# Temporary page
 @app.route("/temp")
 def temp():
     return "<html lang='en'> <head> <meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'> <link rel='icon' type='image/png' href='https://cdn.glitch.global/d50c3bf5-4178-464c-a6a4-e664989a272b/favicon.png'> <title>Rafael Cordeiro's Portfolio</title></head> <body><br><br><br><center><h2>Sorry!</h2><br><h4>This portfolio page is currently under development and will be released (very) soon.</div> </body> </html>"
