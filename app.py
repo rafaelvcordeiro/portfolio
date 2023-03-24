@@ -12,7 +12,7 @@ from werkzeug.security import check_password_hash, generate_password_hash
 # 2) https://flask.palletsprojects.com/en/2.2.x/patterns/sqlite3/
 
 
-fieldsList = ["Software Development","Robotics and Machine Design","Electronics and Sensors","Product and Project Management"]
+fieldsList = ["Software Development","Robotics and Machine Design","Product and Project Management"]
 
 
 app = Flask(__name__)
