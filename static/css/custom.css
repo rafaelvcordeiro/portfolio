@@ -226,3 +226,9 @@ li a {
   from {opacity: .4}
   to {opacity: 1}
 }
+
+
+.embedded-video{
+  width: 100%;
+  display: block;
+}

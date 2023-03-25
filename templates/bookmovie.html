@@ -7,11 +7,18 @@
 {% block main %}
 <div class="row">
     <div class="twelve columns">
-        <span style="text-align: center;"><h3>Bookmovie</h3></span>
-        
+        <span style="text-align: center;"><h3><a href="https://bookmovie.glitch.me" target="_blank">Bookmovie </a></h3></span>
     </div>
+
     <br>
 </div>
+
+<!-- video -->
+<div class="row">
+    <div class="twelve columns">
+        <video class="embedded-video" height="" autoplay="" playsinline="" muted="" loop=""  src="../static/images/bookmovie/bookmovie.mp4" poster="../static/images/bookmovie/screen.png"></video>
+    </div>
+</div><hr>
 
 <!-- description -->
 <div class="row">
@@ -19,8 +26,7 @@
         <h5>Description</h5>
         <h6>Bookmovie is a lightweight and intuitive Flask/Python webapp to act as a movie bookmarker, aimed to be used whenever need.<br>
             <strong>Year: </strong>2023<br>
-            <strong>Who's involved: </strong>Rafael Cordeiro<br>
-            <strong>See it in action: </strong><a href="https://bookmovie.glitch.me" target="_blank">click here </a> to access and use the way you like it. Just create a new account and you're ready to go.<br>
+            <strong>Try it: </strong><a href="https://bookmovie.glitch.me" target="_blank">click here </a> to access and use the way you like it. Just create a new account and you're ready to go.<br>
             <strong>Github: </strong><a href="https://www.github.com/rafaelvcordeiro/bookmovie" target="_blank">project repository</a>
         </h6>
     </div>
@@ -37,26 +43,10 @@
         <strong>Cinemagoer API: </strong>to make it fast and easy to add new entries, the <a href="https://cinemagoer.github.io/" target="_blank">Cinemagoer</a> IMDB API was used<br>
         <strong>Memegen: </strong>used the <a href="https://memegen.link/" target="_blank">Memegen</a> meme generator for writing automatic error messages and information.<br>
         <strong>Skeleton: </strong>used <a href="http://getskeleton.com" target="_blank">Skeleton</a> CSS framework to increase frontend development speed. 
-        The Skeleton project seems to be no longer active, but for the basic usage of this webapp where I wanted a minimalistic approach, it worked and suited my needs perfectly well.
-        
-        </h6>
-    </div>      
-</div><hr>
-
-<!-- interesting facts -->
-<div class="row">
-    <div class="twelve columns">
-        <h5>Why I created this webapp?</h5>
-        <h6>This project was initially conceived as CS50's Introduction to Computer Science course final project, and I decided to build a movie bookmarker to aid
-            deciding which next movie to watch.<br>
-        <strong>1. </strong>Whenever a friend recommended a movie or tv show, I would write it somewhere, and by the time I was finally available to watch it,
-            I just couldn't find it, wasting quite some time.<br>
-        <strong>2. </strong>I realized that there are two main factors that guides the decision of what to watch next:
-            the current mood of the viewers and the available time they have. This process of deciding often takes quite some time as well. 
-            That's why this webapp has filters for Genres and Duration to aid selecting faster and more accuratelly what is really needed.<br>
-        <strong>3. </strong>I wanted a computer science project that would challenge myself, as I am constantly improving my backend software engineering skills.
+                
         </h6>
     </div>      
 </div>
+
 
 {% endblock %}
