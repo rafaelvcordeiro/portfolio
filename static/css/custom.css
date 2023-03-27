@@ -87,7 +87,7 @@ html {
   padding: 0px;
   margin: 0px;
   height: 50px;
-  width: auto;
+  width: 290px;
   overflow: hidden;
   text-align: center;
   display: inline-block;
@@ -111,32 +111,10 @@ iframe {
   aspect-ratio: 16 / 9;
 }
 
-ul {
-list-style-type: none;
-margin: 0;
-padding: 0;
-overflow: hidden;
-}
-
-li {
-  display: inline;
-  float: right;
-  padding: 8px;
-}
-
-li a {
-  display: block;
-  padding: 8px;
-}
-
 .textarea-edit {
   width:90% !important;
   height: 80px !important;
 }
-
-
-
-
 
 
 * {box-sizing:border-box}
