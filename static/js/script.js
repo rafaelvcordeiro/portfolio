@@ -120,80 +120,94 @@ function showDetails(selectedItem) {
 
 
 
-////////////////////////////
-/////   Filter cards   /////
-////////////////////////////
 
-// Create three NodeLists: genres, duration and items
-const cboxesFields = document.querySelectorAll("input[name='cbField']");
-const items = document.querySelectorAll(".item");
 
-// Create array of genres, for each item showed in index.html page, delivered by the Records database table
-let itemsGenreList = [];
-const lenItem = items.length;
-for (let j = 0; j < lenItem; j++){
-  itemsGenreList.push(items[j].getAttribute("dFields").split(','));
-}
 
-// Call to action at each time a change occurs in the checkboxes state
-cboxesFields.forEach(function (cbox){
-  cbox.addEventListener("change", updateFilters)
+////////////////////////////////////////////////////////////////
+/////   Image carousel                                     /////
+/////   source: https://splide1js.com/tutorials/gallery/    /////
+////////////////////////////////////////////////////////////////
+
+var splide1 = new Splide("#main-slider1", {
+  width: 600,
+  height: 300,
+  pagination: false,
+  cover: true
 });
 
-// Whenever a checkbox is changed, this function will update the list of current checkboxes values
-function updateFilters() {
-  // Update cboxSelectedFieldsList to current selected genres
-  let cboxSelectedGenreList = [];
-  const lenGenre = cboxesFields.length;
-  for (let i = 0; i < lenGenre; i++){
-    if (cboxesFields[i].checked == true ){
-      cboxSelectedGenreList.push(cboxesFields[i].value);
+var thumbnails1 = document.getElementsByClassName("thumbnail t1");
+var current1;
+
+for (var i = 0; i < thumbnails1.length; i++) {
+  initThumbnail(thumbnails1[i], i);
+}
+
+function initThumbnail(thumbnail1, index) {
+  thumbnail1.addEventListener("click", function () {
+    splide1.go(index);
+  });
+}
+
+splide1.on("mounted move", function () {
+  var thumbnail1 = thumbnails1[splide1.index];
+
+  if (thumbnail1) {
+    if (current1) {
+      current1.classList.remove("is-active");
     }
-  }
- 
-  let lenSelGenre = cboxSelectedGenreList.length;
 
-  //Search if items have the selected checkboxes genres
-  for (let j = 0; j < lenItem; j++){
-    items[j].style.display = "inline-block";  // cleans all genre filters at each iteration
-    for (let i = 0; i < lenSelGenre; i++){        
-      if (!itemsGenreList[j].includes(cboxSelectedGenreList[i])){
-        items[j].style.display = "none";
-      }
+    thumbnail1.classList.add("is-active");
+    current1 = thumbnail1;
+  }
+});
+
+splide1.mount();
+
+
+
+
+
+var splide2 = new Splide("#main-slider2", {
+  width: 600,
+  height: 300,
+  pagination: false,
+  cover: true
+});
+
+var thumbnails2 = document.getElementsByClassName("thumbnail t2");
+var current2;
+
+for (var i = 0; i < thumbnails2.length; i++) {
+  initThumbnail(thumbnails2[i], i);
+}
+
+function initThumbnail(thumbnail2, index) {
+  thumbnail2.addEventListener("click", function () {
+    splide2.go(index);
+  });
+}
+
+splide2.on("mounted move", function () {
+  var thumbnail2 = thumbnails2[splide2.index];
+
+  if (thumbnail2) {
+    if (current2) {
+      current2.classList.remove("is-active");
     }
+
+    thumbnail2.classList.add("is-active");
+    current2 = thumbnail2;
   }
-}
+});
+
+splide2.mount();
 
 
-/////////////////////////////////////////////////////////////////////////////
-/////   Image carousel                                                  /////
-/////   source: https://www.w3schools.com/howto/howto_js_slideshow.asp  /////
-/////////////////////////////////////////////////////////////////////////////
-let slideIndex = 1;
-showSlides(slideIndex);
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
+
+
+
+
+

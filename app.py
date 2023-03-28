@@ -45,10 +45,16 @@ def index():
     return render_template("index.html", fieldsList=fieldsList)
 
 
-# Temporary page
+# Bookmovie project page
 @app.route("/bookmovie")
 def bookmovie():
     return render_template("bookmovie.html")
+
+
+# CNC projects page
+@app.route("/cnc")
+def cnc():
+    return render_template("cnc.html")
 
 
 # Temporary page

@@ -32,6 +32,9 @@
   <link rel="stylesheet" href="../static/css/normalize.css">
   <link rel="stylesheet" href="../static/css/skeleton.css">
   <link rel="stylesheet" href="../static/css/custom.css">
+  <link rel="stylesheet" href="../static/css/splide-skyblue.min.css">
+
+<script type="text/javascript" src="../static/js/splide.min.js"></script>
 
 
 
@@ -53,20 +56,7 @@
   <!-- Navigation Menu
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-  <div>
-    {% if session["user_id"] %}
-    <ul>
-      <li><a href="/logout">logout</a></li>
-      <li><a href="/settings">settings</a></li>
-      <li><a href="/">home</a></li>
 
-      <li><a href="/temp">about</a></li>
-      <li><a href="/">home</a></li>
-    </ul>
-    {% else %}
-
-    {% endif %}
-  </div>
 
   {% block main %} {% endblock %}
 
