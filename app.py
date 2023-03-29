@@ -57,6 +57,12 @@ def cnc():
     return render_template("cnc.html")
 
 
+# Tupia projects page
+@app.route("/tupia")
+def tupia():
+    return render_template("tupia.html")
+
+
 # Temporary page
 @app.route("/temp")
 def temp():
