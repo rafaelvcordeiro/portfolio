@@ -22,10 +22,11 @@
 <div class="row">
     <div class="twelve columns">
         <h5>Visitors</h5>
-        <h6>{% for visitor in visitors %}
-            
+        <h6>
+            {% for visitor in visitors %}
+            {% if "192.168.0" not in visitor["ip"] %}
             {{ visitor }}<br>
-            
+            {% endif%}
             {% endfor %}
         </h6>
     </div>
