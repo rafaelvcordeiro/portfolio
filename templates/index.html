@@ -159,6 +159,22 @@ Portfolio
 <!-- not watched items end -->
 
 <br>
+<br>
 
+  <div class="row" style="margin-top: 10px;">
+    <div class="twelve columns" id="divStats" onclick="expandOtherDiv(this)" style="text-align: center;">
+      <span style="color:darkgray"><h6><strong>...</strong></h6></span>
+    </div>
+    <div class="twelve columns">
+      <div id="divStatsTarget" class="expandOtherDivOff" style="text-align: center;">
+        <form action="/stats" method="post">
+          <input type="password" name="password">
+          <button action="submit">go</button>
+        </form>
+      </div>
+    </div>
+</div>
+
+</form>
 
 {% endblock %}

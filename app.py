@@ -6,10 +6,21 @@ from flask import g
 from datetime import datetime
 from extras import message, login_required
 from werkzeug.security import check_password_hash, generate_password_hash
+from config import cluster
+from pymongo import MongoClient
+
 
 # References for using sqlite3 with python and flask
 # 1) https://pythonbasics.org/flask-sqlite/
 # 2) https://flask.palletsprojects.com/en/2.2.x/patterns/sqlite3/
+
+#MongoDB
+client = MongoClient(cluster)
+db = client.test
+todos = db.todos
+print ("Items:", todos.count_documents({}))  # Counts every element in the database
+#print ("Specific search count:", todos.count_documents({"age": "37"}))  # Counts by searching
+
 
 
 fieldsList = ["Software Development","Robotics and Machine Design","Product and Project Management"]
@@ -33,7 +44,7 @@ def after_request(response):
     response.headers["Pragma"] = "no-cache"
     return response
 """
-    
+
 
 # Homepage route
 @app.route("/")
@@ -41,7 +52,16 @@ def after_request(response):
 def index():
     #user_id = session["user_id"]
 
-   
+    
+    today = str(datetime.today())
+    #today = today.strftime("%Y-%m-%d")
+
+    client_ip = request.remote_addr
+
+    f = open("visitors.txt", "a")
+    f.write("DATE: " + today + " | IP: " + client_ip + "\n")
+    f.close()
+       
     return render_template("index.html", fieldsList=fieldsList)
 
 
@@ -61,6 +81,23 @@ def cnc():
 @app.route("/tupia")
 def tupia():
     return render_template("tupia.html")
+
+
+# Statistics
+@app.route("/stats", methods=["GET","POST"])
+def stats():
+    if request.method=="GET":
+        return "<html lang='en'> <head> <meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'> <link rel='icon' type='image/png' href='https://cdn.glitch.global/d50c3bf5-4178-464c-a6a4-e664989a272b/favicon.png'> <title>Rafael Cordeiro's Portfolio</title></head> <body><br><br><br><center><h2>Sorry!</h2><br><h4>This page is password protected</div> </body> </html>"    
+    else:
+        password = request.form.get("password")
+        if password != "132435":
+            return "<html lang='en'> <head> <meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'> <link rel='icon' type='image/png' href='https://cdn.glitch.global/d50c3bf5-4178-464c-a6a4-e664989a272b/favicon.png'> <title>Rafael Cordeiro's Portfolio</title></head> <body><br><br><br><center><h2>Sorry!</h2><br><h4>This page is password protected</div> </body> </html>"    
+        else:
+            client_ip = request.remote_addr
+            f = open("visitors.txt", "r")
+            visitors = f.readlines()
+            f.close()
+            return render_template("stats.html", client_ip=client_ip, visitors = visitors)
 
 
 # Temporary page

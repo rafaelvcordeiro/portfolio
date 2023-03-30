@@ -12,6 +12,18 @@ html {
   scroll-behavior: smooth;
 }
      
+.expandOtherDivOn{
+  transition: max-height 0.85s ease-in-out;
+  overflow:hidden;
+  max-height: auto;
+}
+
+.expandOtherDivOff{
+  transition: max-height 0.85s ease-in-out;
+  overflow:hidden;
+  max-height: 0px;
+}
+
 .items{
   display: flex;
   flex-wrap: wrap;
