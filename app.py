@@ -4,6 +4,7 @@ from flask_session import Session
 import requests
 from flask import g
 from datetime import datetime
+from csv import DictReader
 from extras import message, login_required
 from werkzeug.security import check_password_hash, generate_password_hash
 #from config import cluster
@@ -52,14 +53,14 @@ def after_request(response):
 def index():
     #user_id = session["user_id"]
 
-    
-    today = str(datetime.today())
-    #today = today.strftime("%Y-%m-%d")
-
+    # Get current date and time
+    today = datetime.today()
+    date = today.strftime("%Y-%m-%d")
+    time = today.strftime("%H:%M:%S")
     client_ip = request.remote_addr
-
-    f = open("visitors.txt", "a")
-    f.write("DATE: " + today + " | IP: " + client_ip + "\n")
+    # Save date, time, ip and page to CSV file
+    f = open("visitors.csv", "a")
+    f.write(date + "," + time + "," + client_ip + "," + "index" + "\n")
     f.close()
        
     return render_template("index.html", fieldsList=fieldsList)
@@ -68,18 +69,50 @@ def index():
 # Bookmovie project page
 @app.route("/bookmovie")
 def bookmovie():
+
+    # Get current date and time
+    today = datetime.today()
+    date = today.strftime("%Y-%m-%d")
+    time = today.strftime("%H:%M:%S")
+    client_ip = request.remote_addr
+    # Save date, time, ip and page to CSV file
+    f = open("visitors.csv", "a")
+    f.write(date + "," + time + "," + client_ip + "," + "bookmovie" + "\n")
+    f.close()
+
     return render_template("bookmovie.html")
 
 
 # CNC projects page
 @app.route("/cnc")
 def cnc():
+
+    # Get current date and time
+    today = datetime.today()
+    date = today.strftime("%Y-%m-%d")
+    time = today.strftime("%H:%M:%S")
+    client_ip = request.remote_addr
+    # Save date, time, ip and page to CSV file
+    f = open("visitors.csv", "a")
+    f.write(date + "," + time + "," + client_ip + "," + "cnc" + "\n")
+    f.close()
+
     return render_template("cnc.html")
 
 
 # Tupia projects page
 @app.route("/tupia")
 def tupia():
+
+    # Get current date and time
+    today = datetime.today()
+    date = today.strftime("%Y-%m-%d")
+    time = today.strftime("%H:%M:%S")
+    client_ip = request.remote_addr
+    # Save date, time, ip and page to CSV file
+    f = open("visitors.csv", "a")
+    f.write(date + "," + time + "," + client_ip + "," + "tupia" + "\n")
+    f.close()
     return render_template("tupia.html")
 
 
@@ -94,9 +127,11 @@ def stats():
             return "<html lang='en'> <head> <meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'> <link rel='icon' type='image/png' href='https://cdn.glitch.global/d50c3bf5-4178-464c-a6a4-e664989a272b/favicon.png'> <title>Rafael Cordeiro's Portfolio</title></head> <body><br><br><br><center><h2>Sorry!</h2><br><h4>This page is password protected</div> </body> </html>"    
         else:
             client_ip = request.remote_addr
-            f = open("visitors.txt", "r")
-            visitors = f.readlines()
-            f.close()
+
+            with open("visitors.csv", 'r') as file:
+                dict_reader = DictReader(file)        
+                visitors = list(dict_reader)
+
             return render_template("stats.html", client_ip=client_ip, visitors = visitors)
 
 
