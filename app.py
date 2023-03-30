@@ -7,7 +7,7 @@ from datetime import datetime
 from extras import message, login_required
 from werkzeug.security import check_password_hash, generate_password_hash
 #from config import cluster
-from pymongo import MongoClient
+#from pymongo import MongoClient
 
 
 # References for using sqlite3 with python and flask
