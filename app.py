@@ -6,7 +6,7 @@ from flask import g
 from datetime import datetime
 from extras import message, login_required
 from werkzeug.security import check_password_hash, generate_password_hash
-from config import cluster
+#from config import cluster
 from pymongo import MongoClient
 
 
@@ -15,10 +15,10 @@ from pymongo import MongoClient
 # 2) https://flask.palletsprojects.com/en/2.2.x/patterns/sqlite3/
 
 #MongoDB
-client = MongoClient(cluster)
-db = client.test
-todos = db.todos
-print ("Items:", todos.count_documents({}))  # Counts every element in the database
+#client = MongoClient(cluster)
+#db = client.test
+#todos = db.todos
+#print ("Items:", todos.count_documents({}))  # Counts every element in the database
 #print ("Specific search count:", todos.count_documents({"age": "37"}))  # Counts by searching
 
 
