@@ -116,6 +116,23 @@ def tupia():
     return render_template("tupia.html")
 
 
+# CNC projects page
+@app.route("/robot")
+def robot():
+
+    # Get current date and time
+    today = datetime.today()
+    date = today.strftime("%Y-%m-%d")
+    time = today.strftime("%H:%M:%S")
+    client_ip = request.remote_addr
+    # Save date, time, ip and page to CSV file
+    f = open("visitors.csv", "a")
+    f.write(date + "," + time + "," + client_ip + "," + "robot" + "\n")
+    f.close()
+
+    return render_template("robot.html")
+
+
 # Statistics
 @app.route("/stats", methods=["GET","POST"])
 def stats():
