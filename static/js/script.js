@@ -130,7 +130,7 @@ function showDetails(selectedItem) {
 
 var splide1 = new Splide("#main-slider1", {
   width: 600,
-  height: 300,
+  height: 350,
   pagination: false,
   cover: true
 });
@@ -166,10 +166,9 @@ splide1.mount();
 
 
 
-
 var splide2 = new Splide("#main-slider2", {
   width: 600,
-  height: 300,
+  height: 400,
   pagination: false,
   cover: true
 });
@@ -201,6 +200,51 @@ splide2.on("mounted move", function () {
 });
 
 splide2.mount();
+
+
+
+
+
+var splide3 = new Splide("#main-slider3", {
+  width: 600,
+  height: 400,
+  pagination: false,
+  cover: true
+});
+
+var thumbnails3 = document.getElementsByClassName("thumbnail t2");
+var current2;
+
+for (var i = 0; i < thumbnails3.length; i++) {
+  initThumbnail(thumbnails3[i], i);
+}
+
+function initThumbnail(thumbnail3, index) {
+  thumbnail3.addEventListener("click", function () {
+    splide3.go(index);
+  });
+}
+
+splide3.on("mounted move", function () {
+  var thumbnail3 = thumbnails3[splide3.index];
+
+  if (thumbnail3) {
+    if (current2) {
+      current2.classList.remove("is-active");
+    }
+
+    thumbnail3.classList.add("is-active");
+    current2 = thumbnail3;
+  }
+});
+
+splide3.mount();
+
+
+
+
+
+
 
 
 
