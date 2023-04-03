@@ -161,7 +161,7 @@ def robot():
     f.write(date + "," + time + "," + client_ip + "," + "robot" + "\n")
     f.close()
 
-    return render_template("robolabor.html")
+    return render_template("robot.html")
 
 
 # Statistics
