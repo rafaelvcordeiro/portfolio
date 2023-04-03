@@ -57,7 +57,14 @@ def index():
     today = datetime.today()
     date = today.strftime("%Y-%m-%d")
     time = today.strftime("%H:%M:%S")
-    client_ip = request.remote_addr
+
+    #client_ip = request.remote_addr
+    if request.environ.get('HTTP_X_FORWARDED_FOR') is None:
+        client_ip = request.environ['REMOTE_ADDR']
+    else:
+        client_ip = request.environ['HTTP_X_FORWARDED_FOR']
+    
+   
     # Save date, time, ip and page to CSV file
     f = open("visitors.csv", "a")
     f.write(date + "," + time + "," + client_ip + "," + "index" + "\n")
@@ -74,7 +81,13 @@ def bookmovie():
     today = datetime.today()
     date = today.strftime("%Y-%m-%d")
     time = today.strftime("%H:%M:%S")
-    client_ip = request.remote_addr
+
+    #client_ip = request.remote_addr
+    if request.environ.get('HTTP_X_FORWARDED_FOR') is None:
+        client_ip = request.environ['REMOTE_ADDR']
+    else:
+        client_ip = request.environ['HTTP_X_FORWARDED_FOR']
+
     # Save date, time, ip and page to CSV file
     f = open("visitors.csv", "a")
     f.write(date + "," + time + "," + client_ip + "," + "bookmovie" + "\n")
@@ -91,7 +104,13 @@ def cnc():
     today = datetime.today()
     date = today.strftime("%Y-%m-%d")
     time = today.strftime("%H:%M:%S")
-    client_ip = request.remote_addr
+
+    #client_ip = request.remote_addr
+    if request.environ.get('HTTP_X_FORWARDED_FOR') is None:
+        client_ip = request.environ['REMOTE_ADDR']
+    else:
+        client_ip = request.environ['HTTP_X_FORWARDED_FOR']
+
     # Save date, time, ip and page to CSV file
     f = open("visitors.csv", "a")
     f.write(date + "," + time + "," + client_ip + "," + "cnc" + "\n")
@@ -108,7 +127,13 @@ def tupia():
     today = datetime.today()
     date = today.strftime("%Y-%m-%d")
     time = today.strftime("%H:%M:%S")
-    client_ip = request.remote_addr
+
+    #client_ip = request.remote_addr
+    if request.environ.get('HTTP_X_FORWARDED_FOR') is None:
+        client_ip = request.environ['REMOTE_ADDR']
+    else:
+        client_ip = request.environ['HTTP_X_FORWARDED_FOR']
+
     # Save date, time, ip and page to CSV file
     f = open("visitors.csv", "a")
     f.write(date + "," + time + "," + client_ip + "," + "tupia" + "\n")
@@ -124,13 +149,19 @@ def robot():
     today = datetime.today()
     date = today.strftime("%Y-%m-%d")
     time = today.strftime("%H:%M:%S")
-    client_ip = request.remote_addr
+
+    #client_ip = request.remote_addr
+    if request.environ.get('HTTP_X_FORWARDED_FOR') is None:
+        client_ip = request.environ['REMOTE_ADDR']
+    else:
+        client_ip = request.environ['HTTP_X_FORWARDED_FOR']
+
     # Save date, time, ip and page to CSV file
     f = open("visitors.csv", "a")
     f.write(date + "," + time + "," + client_ip + "," + "robot" + "\n")
     f.close()
 
-    return render_template("robot.html")
+    return render_template("robolabor.html")
 
 
 # Statistics

@@ -1,0 +1,132 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Mobile Robot
+{% endblock %}
+
+{% block main %}
+<br>
+<h5><a href="/">&lt;&lt; back</a></h5>
+<div class="row">
+    <div class="twelve columns">
+        <span style="text-align: center;"><h3>Mobile Robot</h3></span>
+    </div>
+
+    <br>
+</div>
+
+
+<!-- video -->
+
+<div class="row">
+    <div class="twelve columns" style="text-align: center;">
+        <video style="text-align: center; max-width:300px;" autoplay="" playsinline="" muted="" loop=""  src="../static/images/robo-labor/robo.mp4" poster="../static/images/robo-labor/icon.jpg"></video>
+</div></div><br>
+
+
+
+<!-- CNC AF -->
+<div class="row">
+    <div class="twelve columns">
+        <h5>Description</h5>
+        <h6>Autonomous mobile robot with wheels for surveillance of environments and research activities, capable of sending images in real time and being controlled via the internet.<br>
+            <strong>Year: </strong>2011<br>
+            <strong>Team: </strong>Dr. José Tarcísio Costa, Dr. Marcus Vinícius Veloso and Rafael Cordeiro.<br>
+            <strong>Robot System: </strong>Dr. Marcus Vinícius Veloso developed <a href="https://www.readcube.com/articles/10.1007%2Fs10846-017-0504-y?author_access_token=EUTryloVMRCH2nySl5HKuPe4RwlQNchNByi7wbcMAY6dHnmIOmtMdgqUaTk7aiPpF4ykq6ZdUZA-l2in_5ZyvDw-fHTrkBYtK9TgFUITY_ruzvrets4lt75Gc6B-CwucmrT_vfVvbE-cg_i1Ci2RFA" target="_blank">SOM4R</a>, a Middleware for Robotic Applications Based on the Resource-Oriented Architecture.<br>
+            <strong>My role: </strong>I was responsible for mechanical parts design, electronic circuits and PCB design, sensors and manufacturing of the robot.<br>
+            <strong>Key Achievements: </strong><br>
+            • Designed a reliable and low cost USB Data Acquisition System (DAS), using native USB protocol with PIC18F4550 microcontroller, 
+            reducing costs by 90%<br>
+            • Patent deposit request at INPI (<a href="http://revistas.inpi.gov.br/pdf/PATENTES2224.pdf" target="_blank"> PI 1106417-0 A2</a>)
+        </h6>
+    </div>
+
+    <!-- <div class=" six columns">
+        <section id="main-slider1" class="splide" aria-label="Gallery2">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide"> <img src="../static/images/robo-labor/rbt-00.JPG" alt=""/> </li>
+                <li class="splide__slide"> <img src="../static/images/robo-labor/rbt-01.JPG" alt=""/> </li>
+                <li class="splide__slide"> <img src="../static/images/robo-labor/rbt-02.JPG" alt=""/> </li>
+                <li class="splide__slide"> <img src="../static/images/robo-labor/rbt-03.JPG" alt=""/> </li>
+                <li class="splide__slide"> <img src="../static/images/robo-labor/rbt-04.JPG" alt=""/> </li>
+                <li class="splide__slide"> <img src="../static/images/robo-labor/rbt-05.JPG" alt=""/> </li>
+                <li class="splide__slide"> <img src="../static/images/robo-labor/rbt-06.JPG" alt=""/> </li>
+                <li class="splide__slide"> <img src="../static/images/robo-labor/rbt-07.JPG" alt=""/> </li>
+
+            </div>
+          </section>
+    </div> -->
+
+
+
+
+
+
+
+
+
+<div class="twelve columns">
+<!-- Images used to open the lightbox -->
+<div class="row">
+    <div class="columna"><img src="../static/images/robo-labor/rbt-00.JPG" onclick="openModal();currentSlide(1)" class="hover-shadow"></div>
+    <div class="columna"><img src="../static/images/robo-labor/rbt-01.JPG" onclick="openModal();currentSlide(2)" class="hover-shadow"></div>
+    <div class="columna"><img src="../static/images/robo-labor/rbt-02.JPG" onclick="openModal();currentSlide(3)" class="hover-shadow"></div>
+    <div class="columna"><img src="../static/images/robo-labor/rbt-03.JPG" onclick="openModal();currentSlide(4)" class="hover-shadow"></div>
+    <div class="columna"><img src="../static/images/robo-labor/rbt-04.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow"></div>
+    <div class="columna"><img src="../static/images/robo-labor/rbt-05.JPG" onclick="openModal();currentSlide(6)" class="hover-shadow"></div>
+    <div class="columna"><img src="../static/images/robo-labor/rbt-06.JPG" onclick="openModal();currentSlide(7)" class="hover-shadow"></div>
+    <div class="columna"><img src="../static/images/robo-labor/rbt-07.JPG" onclick="openModal();currentSlide(8)" class="hover-shadow"></div>
+  </div>
+  
+  <!-- The Modal/Lightbox -->
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+        <div class="mySlides"><div class="numbertext">1 / 8</div><img src="../static/images/robo-labor/rbt-00.JPG" style="width:100%"></div>
+        <div class="mySlides"><div class="numbertext">2 / 8</div><img src="../static/images/robo-labor/rbt-01.JPG" style="width:100%"></div>
+        <div class="mySlides"><div class="numbertext">3 / 8</div><img src="../static/images/robo-labor/rbt-02.JPG" style="width:100%"></div>  
+        <div class="mySlides"><div class="numbertext">4 / 8</div><img src="../static/images/robo-labor/rbt-03.JPG" style="width:100%"></div>
+        <div class="mySlides"><div class="numbertext">5 / 8</div><img src="../static/images/robo-labor/rbt-04.JPG" style="width:100%"></div>
+        <div class="mySlides"><div class="numbertext">6 / 8</div><img src="../static/images/robo-labor/rbt-05.JPG" style="width:100%"></div>
+        <div class="mySlides"><div class="numbertext">7 / 8</div><img src="../static/images/robo-labor/rbt-06.jpg" style="width:100%"></div>
+        <div class="mySlides"><div class="numbertext">8 / 8</div><img src="../static/images/robo-labor/rbt-07.jpg" style="width:100%"></div>
+         
+      <!-- Next/previous controls -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+      <!-- Caption text -->
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+  
+      <!-- Thumbnail image controls -->
+      <div class="columna"><img class="demo" src="../static/images/robo-labor/rbt-00.JPG" onclick="currentSlide(1)" alt="Nature"></div>
+      <div class="columna"><img class="demo" src="../static/images/robo-labor/rbt-01.JPG" onclick="currentSlide(2)" alt="Snow"></div>
+      <div class="columna"><img class="demo" src="../static/images/robo-labor/rbt-02.JPG" onclick="currentSlide(3)" alt="Mountains"></div>
+      <div class="columna"><img class="demo" src="../static/images/robo-labor/rbt-03.JPG" onclick="currentSlide(4)" alt="Lights"></div>
+      <div class="columna"><img class="demo" src="../static/images/robo-labor/rbt-04.JPG" onclick="currentSlide(5)" alt="Lights"></div>
+      <div class="columna"><img class="demo" src="../static/images/robo-labor/rbt-05.JPG" onclick="currentSlide(6)" alt="Lights"></div>
+      <div class="columna"><img class="demo" src="../static/images/robo-labor/rbt-06.JPG" onclick="currentSlide(7)" alt="Lights"></div>
+      <div class="columna"><img class="demo" src="../static/images/robo-labor/rbt-07.jpg" onclick="currentSlide(8)" alt="Lights"></div>
+    </div>
+  </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<br>
+
+{% endblock %}
