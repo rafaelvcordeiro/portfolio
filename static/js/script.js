@@ -125,7 +125,7 @@ function showDetails(selectedItem) {
 
 ////////////////////////////////////////////////////////////////
 /////   Image carousel                                     /////
-/////   source: https://splide1js.com/tutorials/gallery/    /////
+/////   source: https://splide1js.com/tutorials/gallery/   /////
 ////////////////////////////////////////////////////////////////
 
 var splide1 = new Splide("#main-slider1", {
@@ -205,6 +205,8 @@ splide2.mount();
 
 
 
+
+
 var splide3 = new Splide("#main-slider3", {
   width: 600,
   height: 400,
@@ -251,7 +253,10 @@ splide3.mount();
 
 
 
-
+/////////////////////////////////////////////////////////////////////////////
+/////   Image Lightbox                                                  /////
+/////   source: https://www.w3schools.com/howto/howto_js_lightbox.asp   /////
+/////////////////////////////////////////////////////////////////////////////
 
 // Open the Modal
 function openModal() {
@@ -295,8 +300,98 @@ function showSlides(n) {
 }
 
 
+/////////////////////////////////////////////////////////////////////////////
+/////   Image Lightbox 2                                                  /////
+/////   source: https://www.w3schools.com/howto/howto_js_lightbox.asp   /////
+/////////////////////////////////////////////////////////////////////////////
+
+// Open the Modal
+function openModal2() {
+  document.getElementById("myModal2").style.display = "block";
+}
+
+// Close the Modal
+function closeModal2() {
+  document.getElementById("myModal2").style.display = "none";
+}
+
+var slideIndex2 = 1;
+showSlides2(slideIndex2);
+
+// Next/previous controls
+function plusSlides2(n2) {
+  showSlides2(slideIndex2 += n2);
+}
+
+// Thumbnail image controls
+function currentSlide2(n2) {
+  showSlides2(slideIndex2 = n2);
+}
+
+function showSlides2(n2) {
+  var i2;
+  var slides2 = document.getElementsByClassName("mySlides2");
+  var dots2 = document.getElementsByClassName("demo2");
+  var captionText2 = document.getElementById("caption2");
+  if (n2 > slides2.length) {slideIndex2 = 1}
+  if (n2 < 1) {slideIndex2 = slides2.length}
+  for (i2 = 0; i2 < slides2.length; i2++) {
+    slides2[i2].style.display = "none";
+  }
+  for (i2 = 0; i2 < dots2.length; i2++) {
+    dots2[i2].className = dots2[i2].className.replace(" active", "");
+  }
+  slides2[slideIndex2-1].style.display = "block";
+  dots2[slideIndex2-1].className += " active";
+  captionText2.innerHTML = dots2[slideIndex2-1].alt;
+}
 
 
+/////////////////////////////////////////////////////////////////////////////
+/////   Image Lightbox 3                                                  /////
+/////   source: https://www.w3schools.com/howto/howto_js_lightbox.asp   /////
+/////////////////////////////////////////////////////////////////////////////
+
+// Open the Modal
+function openModal3() {
+  document.getElementById("myModal3").style.display = "block";
+}
+
+// Close the Modal
+function closeModal3() {
+  document.getElementById("myModal3").style.display = "none";
+}
+
+var slideIndex3 = 1;
+showSlides3(slideIndex3);
+
+// Next/previous controls
+function plusSlides3(n3) {
+  showSlides3(slideIndex3 += n3);
+}
+
+// Thumbnail image controls
+function currentSlide3(n3) {
+  showSlides3(slideIndex3 = n3);
+}
+
+function showSlides3(n3) {
+  var i3;
+  var slides3 = document.getElementsByClassName("mySlides3");
+  var dots3 = document.getElementsByClassName("demo3");
+  var captionText3 = document.getElementById("caption3");
+  if (n3 > slides3.length) {slideIndex3 = 1}
+  if (n3 < 1) {slideIndex3 = slides3.length}
+  for (i3 = 0; i3 < slides3.length; i3++) {
+    slides3[i3].style.display = "none";
+  }
+  for (i3 = 0; i3 < dots3.length; i3++) {
+    dots3[i3].className = dots3[i3].className.replace(" active", "");
+  }
+  slides3[slideIndex3-1].style.display = "block";
+  dots3[slideIndex3-1].className += " active";
+  captionText3.innerHTML = dots3[slideIndex3-1].alt;
+}
 
 
 

@@ -36,7 +36,7 @@
 
 <!-- CNC AF -->
 <div class="row">
-    <div class="six columns">
+    <div class="twelve columns">
         <h5>CNC André Ferri</h5>
         <h6>Developed a special CNC machine suited for 3D sculpting of big wooden blocks for the factory of brazilian designer André Ferri<br>
             <strong>Website: </strong><a href="https://www.andreferri.com/" target="_blank">André Ferri Atelier</a><br>
@@ -48,22 +48,52 @@
         </h6>
     </div>
 
-    <div class=" six columns">
-        <section id="main-slider1" class="splide" aria-label="Gallery1">
-            <div class="splide__track">
-              <ul class="splide__list">
-                <li class="splide__slide"> <img src="../static/images/cnc/cnc-af00.jpg" alt=""/> </li>
-                <li class="splide__slide"> <img src="../static/images/cnc/cnc-af02.jpg" alt=""/> </li>
-                <li class="splide__slide"> <img src="../static/images/cnc/cnc-af03.jpg" alt=""/> </li>
-                <li class="splide__slide"> <img src="../static/images/cnc/cnc-af04.jpg" alt=""/> </li>
-                <li class="splide__slide"> <img src="../static/images/cnc/cnc-af08.jpg" alt=""/> </li>
-                <li class="splide__slide"> <img src="../static/images/cnc/cnc-af07.jpg" alt=""/> </li>
-                <li class="splide__slide"> <img src="../static/images/cnc/cnc-af09.jpg" alt=""/> </li>
-
-              </ul>
+    <div class="twelve columns">
+        <!-- Images used to open the lightbox -->
+        <div class="row">
+            <div class="columna"><img style="border-radius: 3px;" src="../static/images/cnc/cnc-af00.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow"></div>
+            <div class="columna"><img style="border-radius: 3px;" src="../static/images/cnc/cnc-af02.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow"></div>
+            <div class="columna"><img style="border-radius: 3px;" src="../static/images/cnc/cnc-af03.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow"></div>
+            <div class="columna"><img style="border-radius: 3px;" src="../static/images/cnc/cnc-af04.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow"></div>
+            <div class="columna"><img style="border-radius: 3px;" src="../static/images/cnc/cnc-af08.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow"></div>
+            <div class="columna"><img style="border-radius: 3px;" src="../static/images/cnc/cnc-af07.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow"></div>
+            <div class="columna"><img style="border-radius: 3px;" src="../static/images/cnc/cnc-af09.jpg" onclick="openModal();currentSlide(7)" class="hover-shadow"></div>
+        </div>
+          
+        <!-- The Modal/Lightbox -->
+        <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+                <div class="mySlides"><div class="numbertext">1 / 7</div><img style="border-radius: 3px;" src="../static/images/cnc/cnc-af00.jpg" style="width:100%"></div>
+                <div class="mySlides"><div class="numbertext">2 / 7</div><img style="border-radius: 3px;" src="../static/images/cnc/cnc-af02.jpg" style="width:100%"></div>
+                <div class="mySlides"><div class="numbertext">3 / 7</div><img style="border-radius: 3px;" src="../static/images/cnc/cnc-af03.jpg" style="width:100%"></div>  
+                <div class="mySlides"><div class="numbertext">4 / 7</div><img style="border-radius: 3px;" src="../static/images/cnc/cnc-af04.jpg" style="width:100%"></div>
+                <div class="mySlides"><div class="numbertext">5 / 7</div><img style="border-radius: 3px;" src="../static/images/cnc/cnc-af08.jpg" style="width:100%"></div>
+                <div class="mySlides"><div class="numbertext">6 / 7</div><img style="border-radius: 3px;" src="../static/images/cnc/cnc-af07.jpg" style="width:100%"></div>
+                <div class="mySlides"><div class="numbertext">7 / 7</div><img style="border-radius: 3px;" src="../static/images/cnc/cnc-af09.jpg" style="width:100%"></div>
+                                    
+                <!-- Next/previous controls -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+                <!-- Caption text -->
+                <div class="caption-container">
+                <p id="caption"></p>
+                </div>
+            
+                <!-- Thumbnail image controls -->
+                <div class="columna"><img class="demo" src="../static/images/cnc/cnc-af00.jpg" onclick="currentSlide(1)" alt="CNC and fourth axis"></div>
+                <div class="columna"><img class="demo" src="../static/images/cnc/cnc-af02.jpg" onclick="currentSlide(2)" alt="Z plate being milled on another cnc machine"></div>
+                <div class="columna"><img class="demo" src="../static/images/cnc/cnc-af03.jpg" onclick="currentSlide(3)" alt="reiforcement ribs being assembled on Z carriage"></div>
+                <div class="columna"><img class="demo" src="../static/images/cnc/cnc-af04.jpg" onclick="currentSlide(4)" alt="overall view of the machine nearly completed "></div>
+                <div class="columna"><img class="demo" src="../static/images/cnc/cnc-af08.jpg" onclick="currentSlide(5)" alt="CNC in custumer's manufacturing site showing completed machine being used"></div>
+                <div class="columna"><img class="demo" src="../static/images/cnc/cnc-af07.jpg" onclick="currentSlide(6)" alt="owner of the machine checking a recently finished piece that was made with the new machine"></div>
+                <div class="columna"><img class="demo" src="../static/images/cnc/cnc-af09.jpg" onclick="currentSlide(7)" alt="studio photo with products made with the new cnc machine"></div>
             </div>
-          </section>
+        </div>
     </div>
+
+
 </div>
 <hr>
 
@@ -71,7 +101,7 @@
 
 <!-- CNC jangada -->
 <div class="row">
-    <div class="six columns">
+    <div class="twelve columns">
         <h5>Plywood CNC</h5>
         <h6>Developed a CNC machine suited for cutting an entire plywood sheet (2200x 1600 mm).
             This machine was developed with the intention of providing precision manufacturing services.<br>
@@ -83,58 +113,123 @@
         </h6>
     </div>
 
-    <div class=" six columns">
-        <section id="main-slider2" class="splide" aria-label="Gallery2">
-            <div class="splide__track">
-              <ul class="splide__list">
-                <li class="splide__slide"> <img src="../static/images/cnc/cnc-j01.jpg" alt=""/> </li>
-                <li class="splide__slide"> <img src="../static/images/cnc/cnc-j02.jpg" alt=""/> </li>
-                <li class="splide__slide"> <img src="../static/images/cnc/cnc-j03.jpg" alt=""/> </li>
-                <li class="splide__slide"> <img src="../static/images/cnc/cnc-j04.jpg" alt=""/> </li>
-                <li class="splide__slide"> <img src="../static/images/cnc/cnc-j05.jpg" alt=""/> </li>
 
-              </ul>
+    <div class="twelve columns">
+        <!-- Images used to open the lightbox -->
+        <div class="row">
+            <div class="columna"><img style="border-radius: 3px;" src="../static/images/cnc/cnc-j01.jpg" onclick="openModal2();currentSlide2(1)" class="hover-shadow"></div>
+            <div class="columna"><img style="border-radius: 3px;" src="../static/images/cnc/cnc-j02.jpg" onclick="openModal2();currentSlide2(2)" class="hover-shadow"></div>
+            <div class="columna"><img style="border-radius: 3px;" src="../static/images/cnc/cnc-j03.jpg" onclick="openModal2();currentSlide2(3)" class="hover-shadow"></div>
+            <div class="columna"><img style="border-radius: 3px;" src="../static/images/cnc/cnc-j04.jpg" onclick="openModal2();currentSlide2(4)" class="hover-shadow"></div>
+            <div class="columna"><img style="border-radius: 3px;" src="../static/images/cnc/cnc-j05.jpg" onclick="openModal2();currentSlide2(5)" class="hover-shadow"></div>
+            <div class="columna"><img style="border-radius: 3px;" src="../static/images/cnc/cnc-j06.jpg" onclick="openModal2();currentSlide2(6)" class="hover-shadow"></div>
+        </div>
+          
+        <!-- The Modal/Lightbox -->
+        <div id="myModal2" class="modal">
+        <span class="close cursor" onclick="closeModal2()">&times;</span>
+            <div class="modal-content">
+                <div class="mySlides2"><div class="numbertext">1 / 6</div><img style="border-radius: 3px;" src="../static/images/cnc/cnc-j01.jpg" style="width:100%"></div>
+                <div class="mySlides2"><div class="numbertext">2 / 6</div><img style="border-radius: 3px;" src="../static/images/cnc/cnc-j02.jpg" style="width:100%"></div>
+                <div class="mySlides2"><div class="numbertext">3 / 6</div><img style="border-radius: 3px;" src="../static/images/cnc/cnc-j03.jpg" style="width:100%"></div>  
+                <div class="mySlides2"><div class="numbertext">4 / 6</div><img style="border-radius: 3px;" src="../static/images/cnc/cnc-j04.jpg" style="width:100%"></div>
+                <div class="mySlides2"><div class="numbertext">5 / 6</div><img style="border-radius: 3px;" src="../static/images/cnc/cnc-j05.jpg" style="width:100%"></div>
+                <div class="mySlides2"><div class="numbertext">6 / 6</div><img style="border-radius: 3px;" src="../static/images/cnc/cnc-j06.jpg" style="width:100%"></div>
+
+                                    
+                <!-- Next/previous controls -->
+                <a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides2(1)">&#10095;</a>
+            
+                <!-- Caption text -->
+                <div class="caption-container">
+                <p id="caption2"></p>
+                </div>
+            
+                <!-- Thumbnail image controls -->
+                <div class="columna"><img class="demo2" src="../static/images/cnc/cnc-j01.jpg" onclick="currentSlide2(1)" alt="CNC and fourth axis"></div>
+                <div class="columna"><img class="demo2" src="../static/images/cnc/cnc-j02.jpg" onclick="currentSlide2(2)" alt="Z plate being milled on another cnc machine"></div>
+                <div class="columna"><img class="demo2" src="../static/images/cnc/cnc-j03.jpg" onclick="currentSlide2(3)" alt="reiforcement ribs being assembled on Z carriage"></div>
+                <div class="columna"><img class="demo2" src="../static/images/cnc/cnc-j04.jpg" onclick="currentSlide2(4)" alt="overall view of the machine nearly completed "></div>
+                <div class="columna"><img class="demo2" src="../static/images/cnc/cnc-j05.jpg" onclick="currentSlide2(5)" alt="CNC in custumer's manufacturing site showing completed machine being used"></div>
+                <div class="columna"><img class="demo2" src="../static/images/cnc/cnc-j06.jpg" onclick="currentSlide2(6)" alt="CNC in custumer's manufacturing site showing completed machine being used"></div>
+
             </div>
-          </section>
+        </div>
     </div>
+
 </div>
 <hr><br>
 
 
 <!-- Impressora 3D -->
 <div class="row">
-    <div class="six columns">
+    <div class="twelve columns">
         <h5>3D Printer</h5>
         <h6>Developed a different type of CNC machine, a FDM (Fused Deposition Modeling) 3d printer, using an original mechanical layout,
              to achieve high stiffness and low cost with fewer expensive pieces.<br>
             <strong>Year: </strong>2014<br>
             <strong>Working volume: </strong>200 x 200 x 200 mm<br>
             <strong>Tools: </strong>Rhinoceros 3D, Marlin firmware<br>
-            <strong>Key Achievements: </strong>well, it works, and actually prints plastic parts using PLA or ABS, until today :D<br>
+            <strong>Key Achievements: </strong>it's a fully working 3d printer that actually prints plastic parts using PLA or ABS.<br>
         </h6>
     </div>
 
-    <div class=" six columns">
-        <section id="main-slider3" class="splide" aria-label="Gallery">
-            <div class="splide__track">
-              <ul class="splide__list">
-                <li class="splide__slide"> <img src="../static/images/cnc/cnc-i01.jpg" alt=""/> </li>
-                <li class="splide__slide"> <img src="../static/images/cnc/cnc-i02.jpeg" alt=""/> </li>
-                <li class="splide__slide"> <img src="../static/images/cnc/cnc-i03.jpeg" alt=""/> </li>
-                <li class="splide__slide"> <img src="../static/images/cnc/cnc-i04.jpg" alt=""/> </li>
-                <li class="splide__slide"> <img src="../static/images/cnc/cnc-i05.jpg" alt=""/> </li>
-                <li class="splide__slide"> <img src="../static/images/cnc/cnc-i06.jpg" alt=""/> </li>
-                <li class="splide__slide"> <img src="../static/images/cnc/cnc-i07.jpg" alt=""/> </li>
-                <li class="splide__slide"> <img src="../static/images/cnc/cnc-i08.jpg" alt=""/> </li>
-                <li class="splide__slide"> <img src="../static/images/cnc/cnc-i09.jpg" alt=""/> </li>
-                <li class="splide__slide"> <img src="../static/images/cnc/cnc-i10.jpg" alt=""/> </li>
+    <div class="twelve columns">
+        <!-- Images used to open the lightbox -->
+        <div class="row">
+            <div class="columna"><img style="border-radius: 3px;" src="../static/images/cnc/cnc-i01.jpg" onclick="openModal3();currentSlide3(1)" class="hover-shadow"></div>
+            <div class="columna"><img style="border-radius: 3px;" src="../static/images/cnc/cnc-i02.jpeg" onclick="openModal3();currentSlide3(2)" class="hover-shadow"></div>
+            <div class="columna"><img style="border-radius: 3px;" src="../static/images/cnc/cnc-i03.jpeg" onclick="openModal3();currentSlide3(3)" class="hover-shadow"></div>
+            <div class="columna"><img style="border-radius: 3px;" src="../static/images/cnc/cnc-i04.jpg" onclick="openModal3();currentSlide3(4)" class="hover-shadow"></div>
+            <div class="columna"><img style="border-radius: 3px;" src="../static/images/cnc/cnc-i05.jpg" onclick="openModal3();currentSlide3(5)" class="hover-shadow"></div>
+            <div class="columna"><img style="border-radius: 3px;" src="../static/images/cnc/cnc-i06.jpg" onclick="openModal3();currentSlide3(1)" class="hover-shadow"></div>
+            <div class="columna"><img style="border-radius: 3px;" src="../static/images/cnc/cnc-i07.jpg" onclick="openModal3();currentSlide3(2)" class="hover-shadow"></div>
+            <div class="columna"><img style="border-radius: 3px;" src="../static/images/cnc/cnc-i08.jpg" onclick="openModal3();currentSlide3(3)" class="hover-shadow"></div>
+            <div class="columna"><img style="border-radius: 3px;" src="../static/images/cnc/cnc-i09.jpg" onclick="openModal3();currentSlide3(4)" class="hover-shadow"></div>
+            <div class="columna"><img style="border-radius: 3px;" src="../static/images/cnc/cnc-i10.jpg" onclick="openModal3();currentSlide3(5)" class="hover-shadow"></div>
+        </div>
+          
+        <!-- The Modal/Lightbox -->
+        <div id="myModal3" class="modal">
+        <span class="close cursor" onclick="closeModal3()">&times;</span>
+            <div class="modal-content">
+                <div class="mySlides3"><div class="numbertext">1 / 10</div><img style="border-radius: 3px;" src="../static/images/cnc/cnc-i01.jpg" style="width:100%"></div>
+                <div class="mySlides3"><div class="numbertext">2 / 10</div><img style="border-radius: 3px;" src="../static/images/cnc/cnc-i02.jpeg" style="width:100%"></div>
+                <div class="mySlides3"><div class="numbertext">3 / 10</div><img style="border-radius: 3px;" src="../static/images/cnc/cnc-i03.jpeg" style="width:100%"></div>  
+                <div class="mySlides3"><div class="numbertext">4 / 10</div><img style="border-radius: 3px;" src="../static/images/cnc/cnc-i04.jpg" style="width:100%"></div>
+                <div class="mySlides3"><div class="numbertext">5 / 10</div><img style="border-radius: 3px;" src="../static/images/cnc/cnc-i05.jpg" style="width:100%"></div>
+                <div class="mySlides3"><div class="numbertext">6 / 10</div><img style="border-radius: 3px;" src="../static/images/cnc/cnc-i06.jpg" style="width:100%"></div>
+                <div class="mySlides3"><div class="numbertext">7 / 10</div><img style="border-radius: 3px;" src="../static/images/cnc/cnc-i07.jpg" style="width:100%"></div>
+                <div class="mySlides3"><div class="numbertext">8 / 10</div><img style="border-radius: 3px;" src="../static/images/cnc/cnc-i08.jpg" style="width:100%"></div>  
+                <div class="mySlides3"><div class="numbertext">9 / 10</div><img style="border-radius: 3px;" src="../static/images/cnc/cnc-i09.jpg" style="width:100%"></div>
+                <div class="mySlides3"><div class="numbertext">10 / 10</div><img style="border-radius: 3px;" src="../static/images/cnc/cnc-i10.jpg" style="width:100%"></div>
+                                    
+                <!-- Next/previous controls -->
+                <a class="prev" onclick="plusSlides3(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides3(1)">&#10095;</a>
+            
+                <!-- Caption text -->
+                <div class="caption-container">
+                <p id="caption3"></p>
+                </div>
+            
+                <!-- Thumbnail image controls -->
+                <div class="columna"><img class="demo3" src="../static/images/cnc/cnc-i01.jpg" onclick="currentSlide3(1)" alt="CNC and fourth axis"></div>
+                <div class="columna"><img class="demo3" src="../static/images/cnc/cnc-i02.jpeg" onclick="currentSlide3(2)" alt="Z plate being milled on another cnc machine"></div>
+                <div class="columna"><img class="demo3" src="../static/images/cnc/cnc-i03.jpeg" onclick="currentSlide3(3)" alt="reiforcement ribs being assembled on Z carriage"></div>
+                <div class="columna"><img class="demo3" src="../static/images/cnc/cnc-i04.jpg" onclick="currentSlide3(4)" alt="overall view of the machine nearly completed "></div>
+                <div class="columna"><img class="demo3" src="../static/images/cnc/cnc-i05.jpg" onclick="currentSlide3(5)" alt="CNC in custumer's manufacturing site showing completed machine being used"></div>
+                <div class="columna"><img class="demo3" src="../static/images/cnc/cnc-i06.jpg" onclick="currentSlide3(6)" alt="CNC and fourth axis"></div>
+                <div class="columna"><img class="demo3" src="../static/images/cnc/cnc-i07.jpg" onclick="currentSlide3(7)" alt="Z plate being milled on another cnc machine"></div>
+                <div class="columna"><img class="demo3" src="../static/images/cnc/cnc-i08.jpg" onclick="currentSlide3(8)" alt="reiforcement ribs being assembled on Z carriage"></div>
+                <div class="columna"><img class="demo3" src="../static/images/cnc/cnc-i09.jpg" onclick="currentSlide3(9)" alt="overall view of the machine nearly completed "></div>
+                <div class="columna"><img class="demo3" src="../static/images/cnc/cnc-i10.jpg" onclick="currentSlide3(10)" alt="CNC in custumer's manufacturing site showing completed machine being used"></div>
 
-
-              </ul>
             </div>
-          </section>
-
+        </div>
     </div>
+
 </div>
 <hr><br>
 

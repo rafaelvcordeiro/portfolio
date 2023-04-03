@@ -166,9 +166,6 @@ iframe {
 
 
 
-
-
-
 .row > .columna {
   padding: 0 1px;
 }
@@ -202,7 +199,7 @@ iframe {
 /* Modal Content */
 .modal-content {
   position: relative;
-  background-color: #fefefe;
+  background-color: #000000;
   margin: auto;
   padding: 0;
   width: 90%;
