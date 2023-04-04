@@ -1,0 +1,126 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Jangada
+{% endblock %}
+
+{% block main %}
+<br>
+<h5><a href="/">&lt;&lt; back</a></h5>
+<div class="row">
+    <div class="twelve columns">
+        <span style="text-align: center;"><h3>Jangada - Digital Manufacturing</h3></span>
+    </div>
+
+    <br>
+</div>
+
+
+<!-- video -->
+
+<div class="row">
+    <div class="twelve columns" style="text-align: center;">
+        <video style="text-align: center; max-width:360px;" autoplay="" playsinline="" muted="" loop=""  src="../static/images/fabrica-jangada/jangada.mp4" poster="../static/images/tupia/tup (4).jpg"></video>
+</div></div><br>
+
+
+
+<!-- CNC AF -->
+<div class="row">
+    <div class="twelve columns">
+        <h5>Description</h5>
+        <h6>Fábrica Jangada was a precision manufacturing business I have founded in 2017, offering high quality machining services<br>
+            The CNC machines used were manufactured in house, and we combined a high level of precision manufacturing knowledge with excellent services, 
+            and have been considered by our clients as a highly innovative firm.<br>
+            <strong>Period: </strong>2017 to 2021<br>
+            <strong>My role: </strong>business and team management, custumers projects and products management, design of new cnc machines, product design, CADCAM training.<br>
+            <strong>Key Achievements: </strong><br>
+            • We engaged in over 500 different projects, from all sort of sizes, that were delivered 95% on schedule, with 100% custumer satisfaction.<br>
+
+                        
+        </h6>
+    </div>
+
+
+
+    <div class="twelve columns">
+        <!-- Images used to open the lightbox -->
+        <div class="row">
+            <div class="columna"><img style="border-radius: 3px;" src="../static/images/fabrica-jangada/jan-00.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow"></div>
+            <div class="columna"><img style="border-radius: 3px;" src="../static/images/fabrica-jangada/jan-01.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow"></div>
+            <div class="columna"><img style="border-radius: 3px;" src="../static/images/fabrica-jangada/jan-02.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow"></div>
+            <div class="columna"><img style="border-radius: 3px;" src="../static/images/fabrica-jangada/jan-03.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow"></div>
+            <div class="columna"><img style="border-radius: 3px;" src="../static/images/fabrica-jangada/jan-04.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow"></div>
+            <div class="columna"><img style="border-radius: 3px;" src="../static/images/fabrica-jangada/jan-05.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow"></div>
+            <div class="columna"><img style="border-radius: 3px;" src="../static/images/fabrica-jangada/jan-06.jpg" onclick="openModal();currentSlide(7)" class="hover-shadow"></div>
+            <div class="columna"><img style="border-radius: 3px;" src="../static/images/fabrica-jangada/jan-07.jpg" onclick="openModal();currentSlide(8)" class="hover-shadow"></div>
+            <div class="columna"><img style="border-radius: 3px;" src="../static/images/fabrica-jangada/jan-08.jpg" onclick="openModal();currentSlide(9)" class="hover-shadow"></div>
+            <div class="columna"><img style="border-radius: 3px;" src="../static/images/fabrica-jangada/jan-09.jpg" onclick="openModal();currentSlide(10)" class="hover-shadow"></div>
+            <div class="columna"><img style="border-radius: 3px;" src="../static/images/fabrica-jangada/jan-10.jpg" onclick="openModal();currentSlide(11)" class="hover-shadow"></div>
+            <div class="columna"><img style="border-radius: 3px;" src="../static/images/fabrica-jangada/jan-11.jpg" onclick="openModal();currentSlide(12)" class="hover-shadow"></div>
+            <div class="columna"><img style="border-radius: 3px;" src="../static/images/fabrica-jangada/jan-12.jpg" onclick="openModal();currentSlide(13)" class="hover-shadow"></div>
+            <div class="columna"><img style="border-radius: 3px;" src="../static/images/fabrica-jangada/jan-13.jpg" onclick="openModal();currentSlide(14)" class="hover-shadow"></div>
+            <div class="columna"><img style="border-radius: 3px;" src="../static/images/fabrica-jangada/jan-14.jpg" onclick="openModal();currentSlide(15)" class="hover-shadow"></div>
+        </div>
+          
+        <!-- The Modal/Lightbox -->
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+                <div class="mySlides"><div class="numbertext">1 / 15</div><img style="border-radius: 3px;" src="../static/images/fabrica-jangada/jan-00.jpg" style="width:100%"></div>
+                <div class="mySlides"><div class="numbertext">2 / 15</div><img style="border-radius: 3px;" src="../static/images/fabrica-jangada/jan-01.jpg" style="width:100%"></div>
+                <div class="mySlides"><div class="numbertext">3 / 15</div><img style="border-radius: 3px;" src="../static/images/fabrica-jangada/jan-02.jpg" style="width:100%"></div>  
+                <div class="mySlides"><div class="numbertext">4 / 15</div><img style="border-radius: 3px;" src="../static/images/fabrica-jangada/jan-03.jpg" style="width:100%"></div>
+                <div class="mySlides"><div class="numbertext">5 / 15</div><img style="border-radius: 3px;" src="../static/images/fabrica-jangada/jan-04.jpg" style="width:100%"></div>
+                <div class="mySlides"><div class="numbertext">6 / 15</div><img style="border-radius: 3px;" src="../static/images/fabrica-jangada/jan-05.jpg" style="width:100%"></div>
+                <div class="mySlides"><div class="numbertext">7 / 15</div><img style="border-radius: 3px;" src="../static/images/fabrica-jangada/jan-06.jpg" style="width:100%"></div>
+                <div class="mySlides"><div class="numbertext">8 / 15</div><img style="border-radius: 3px;" src="../static/images/fabrica-jangada/jan-07.jpg" style="width:100%"></div>
+                <div class="mySlides"><div class="numbertext">9 / 15</div><img style="border-radius: 3px;" src="../static/images/fabrica-jangada/jan-08.jpg" style="width:100%"></div>
+               <div class="mySlides"><div class="numbertext">10 / 15</div><img style="border-radius: 3px;" src="../static/images/fabrica-jangada/jan-09.jpg" style="width:100%"></div>
+               <div class="mySlides"><div class="numbertext">11 / 15</div><img style="border-radius: 3px;" src="../static/images/fabrica-jangada/jan-10.jpg" style="width:100%"></div>
+               <div class="mySlides"><div class="numbertext">12 / 15</div><img style="border-radius: 3px;" src="../static/images/fabrica-jangada/jan-11.jpg" style="width:100%"></div>
+               <div class="mySlides"><div class="numbertext">13 / 15</div><img style="border-radius: 3px;" src="../static/images/fabrica-jangada/jan-12.jpg" style="width:100%"></div>
+               <div class="mySlides"><div class="numbertext">14 / 15</div><img style="border-radius: 3px;" src="../static/images/fabrica-jangada/jan-13.jpg" style="width:100%"></div>
+               <div class="mySlides"><div class="numbertext">15 / 15</div><img style="border-radius: 3px;" src="../static/images/fabrica-jangada/jan-14.jpg" style="width:100%"></div>
+                 
+              <!-- Next/previous controls -->
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          
+              <!-- Caption text -->
+              <div class="caption-container">
+                <p id="caption"></p>
+              </div>
+          
+              <!-- Thumbnail image controls -->
+              <div class="columna"><img class="demo" src="../static/images/fabrica-jangada/jan-00.jpg" onclick="currentSlide(1)" alt="Nature"></div>
+              <div class="columna"><img class="demo" src="../static/images/fabrica-jangada/jan-01.jpg" onclick="currentSlide(2)" alt="Snow"></div>
+              <div class="columna"><img class="demo" src="../static/images/fabrica-jangada/jan-02.jpg" onclick="currentSlide(3)" alt="Mountains"></div>
+              <div class="columna"><img class="demo" src="../static/images/fabrica-jangada/jan-03.jpg" onclick="currentSlide(4)" alt="Lights"></div>
+              <div class="columna"><img class="demo" src="../static/images/fabrica-jangada/jan-04.jpg" onclick="currentSlide(5)" alt="Lights"></div>
+              <div class="columna"><img class="demo" src="../static/images/fabrica-jangada/jan-05.jpg" onclick="currentSlide(6)" alt="Lights"></div>
+              <div class="columna"><img class="demo" src="../static/images/fabrica-jangada/jan-06.jpg" onclick="currentSlide(7)" alt="Lights"></div>
+              <div class="columna"><img class="demo" src="../static/images/fabrica-jangada/jan-07.jpg" onclick="currentSlide(8)" alt="Lights"></div>
+              <div class="columna"><img class="demo" src="../static/images/fabrica-jangada/jan-08.jpg" onclick="currentSlide(9)" alt="Lights"></div>
+              <div class="columna"><img class="demo" src="../static/images/fabrica-jangada/jan-09.jpg" onclick="currentSlide(10)" alt="Lights"></div>
+              <div class="columna"><img class="demo" src="../static/images/fabrica-jangada/jan-10.jpg" onclick="currentSlide(11)" alt="Lights"></div>
+              <div class="columna"><img class="demo" src="../static/images/fabrica-jangada/jan-11.jpg" onclick="currentSlide(12)" alt="Lights"></div>
+              <div class="columna"><img class="demo" src="../static/images/fabrica-jangada/jan-12.jpg" onclick="currentSlide(13)" alt="Lights"></div>
+              <div class="columna"><img class="demo" src="../static/images/fabrica-jangada/jan-13.jpg" onclick="currentSlide(14)" alt="Lights"></div>
+              <div class="columna"><img class="demo" src="../static/images/fabrica-jangada/jan-14.jpg" onclick="currentSlide(15)" alt="Lights"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+</div>
+<br>
+
+{% endblock %}

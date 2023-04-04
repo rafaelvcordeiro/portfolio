@@ -164,6 +164,29 @@ def robot():
     return render_template("robot.html")
 
 
+# CNC projects page
+@app.route("/jangada")
+def jangada():
+
+    # Get current date and time
+    today = datetime.today()
+    date = today.strftime("%Y-%m-%d")
+    time = today.strftime("%H:%M:%S")
+
+    #client_ip = request.remote_addr
+    if request.environ.get('HTTP_X_FORWARDED_FOR') is None:
+        client_ip = request.environ['REMOTE_ADDR']
+    else:
+        client_ip = request.environ['HTTP_X_FORWARDED_FOR']
+
+    # Save date, time, ip and page to CSV file
+    f = open("visitors.csv", "a")
+    f.write(date + "," + time + "," + client_ip + "," + "jangada" + "\n")
+    f.close()
+
+    return render_template("jangada.html")
+
+
 # Statistics
 @app.route("/stats", methods=["GET","POST"])
 def stats():
