@@ -136,9 +136,16 @@ iframe {
 }
 
 /* Create four equal columns that floats next to eachother */
+@media (max-width: 499px) {
+  .columna {
+    float: left;
+    width: 28%;}
+}
+
+@media (min-width: 500px) {
 .columna {
   float: left;
-  width: 19%;
+  width: 19%; }
 }
 
 /* The Modal (background) */
@@ -161,7 +168,7 @@ iframe {
   background-color: #000000;
   margin: auto;
   padding: 0;
-  width: 95%;
+  width: 90%;
   max-width: 600px;
 }
 
