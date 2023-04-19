@@ -23,11 +23,23 @@
     <div class="twelve columns">
         <h5>Visitors</h5>
         <h6>
+            <table>
+                <tr>
+                  <th>date</th>
+                  <th>time</th>
+                  <th>ip</th>
+                  <th>page</th>
+                </tr>
             {% for visitor in visitors %}
-            
-            {{ visitor }}<br>
+               <tr>
+                <td>{{ visitor['date'] }}</td>
+                <td>{{ visitor['time'] }}</td>
+                <td>{{ visitor['ip'] }}</td>
+                <td>{{ visitor['page'] }}</td>
+              </tr>
             
             {% endfor %}
+            </table>
         </h6>
     </div>
 </div>
